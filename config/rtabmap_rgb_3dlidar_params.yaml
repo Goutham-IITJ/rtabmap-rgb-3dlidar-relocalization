@@ -1,0 +1,55 @@
+/**:
+  ros__parameters:
+    use_sim_time: true
+    frame_id: "base_footprint"
+
+    # Inputs: monocular RGB + simulated 3D LiDAR + odometry
+    subscribe_rgb: true
+    subscribe_depth: false
+    subscribe_scan: false
+    subscribe_scan_cloud: true
+    subscribe_stereo: false
+    subscribe_rgbd: false
+
+    approx_sync: true
+    sync_queue_size: 50
+    topic_queue_size: 50
+    wait_for_transform: 1.0
+
+    # 2D robot assumption, even though cloud is 3D
+    Reg/Force3DoF: "true"
+
+    # Registration:
+    # 1 = ICP, so metric registration comes from 3D LiDAR cloud
+    Reg/Strategy: "1"
+
+    # Monocular visual verification
+    # 2 = 2D->2D epipolar geometry
+    Vis/EstimationType: "2"
+
+    # Re-extract image features from old nodes if needed
+    RGBD/LoopClosureReextractFeatures: "true"
+    RGBD/ProximityBySpace: "true"
+
+    # Grid/map should not come from depth image
+    Grid/FromDepth: "false"
+
+    # Visual features
+    Kp/MaxFeatures: "1500"
+    Vis/MaxFeatures: "1500"
+    Vis/MinInliers: "5"
+    Vis/InlierDistance: "0.10"
+
+    # 3D LiDAR ICP settings
+    Icp/PointToPlane: "true"
+    Icp/VoxelSize: "0.10"
+    Icp/MaxCorrespondenceDistance: "0.50"
+    Icp/CorrespondenceRatio: "0.05"
+    Icp/MaxTranslation: "1.5"
+    Icp/MaxRotation: "3.14"
+
+    # Backend tolerance
+    RGBD/OptimizeMaxError: "10.0"
+
+    # Stable processing
+    Rtabmap/DetectionRate: "1.0"

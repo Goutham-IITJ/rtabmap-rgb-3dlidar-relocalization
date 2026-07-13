@@ -1,0 +1,30 @@
+# ROS build artifacts
+build/
+install/
+log/
+
+# RTAB-Map databases
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# ROS bags and recordings
+*.bag
+*.db3
+*.mcap
+*.tar.gz
+*.zip
+*.webm
+*.mp4
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor/system
+.vscode/
+.DS_Store
