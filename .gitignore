@@ -1,30 +1,29 @@
-# ROS build artifacts
+# ROS build outputs
 build/
 install/
 log/
 
-# RTAB-Map databases
-*.db
-*.db-*
-*.sqlite
-*.sqlite3
-
-# ROS bags and recordings
-*.bag
-*.db3
-*.mcap
-*.tar.gz
-*.zip
-*.webm
-*.mp4
-
-# Logs
-*.log
-
-# Python
+# Python/cache
 __pycache__/
 *.pyc
 
-# Editor/system
-.vscode/
+# RTAB-Map databases and large results
+*.db
+*.db-*
+*.sqlite
+*.bag
+*.bag2/
+*.mcap
+
+# Local result/log folders
+real_robot_rtab_results/
+real_robot_rtab_logs/
+rtab_rgb_3dlidar_results/
+results/
+logs/
+videos/
+screenshots/
+
+# System/editor
 .DS_Store
+.vscode/
