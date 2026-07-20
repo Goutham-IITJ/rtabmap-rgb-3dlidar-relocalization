@@ -19,6 +19,7 @@ Unlike conventional localization systems that assume a continuous pose estimate,
 The project contains both
 
 - Simulation pipeline (ROS2 Humble + Gazebo Classic)
+- ROS2 Jazzy(for hardware implementation)
 - Real robot launch configuration
 - Mapping pipeline
 - Localization pipeline
@@ -104,34 +105,34 @@ rtabmap_rgb_3dlidar_ws
                       │
                       │
 
-Wheel Odometry + TF
-          │
-          ▼
-
-      RTAB-Map
-          │
-          │
- ┌────────┴────────┐
- │                 │
- ▼                 ▼
-
- Mapping      Localization
-
- │                 │
- ▼                 ▼
-
-Database       Loop Closure
-
-                    │
-                    ▼
-
-            map → odom correction
-
-                    │
-
-                    ▼
-
-          Global Pose Recovery
+            Wheel Odometry + TF
+                      │
+                      ▼
+            
+                  RTAB-Map
+                      │
+                      │
+             ┌────────┴────────┐
+             │                 │
+             ▼                 ▼
+            
+             Mapping      Localization
+            
+             │                 │
+             ▼                 ▼
+            
+            Database       Loop Closure
+            
+                                │
+                                ▼
+            
+                        map → odom correction
+            
+                                │
+            
+                                ▼
+            
+                      Global Pose Recovery
 ```
 
 ---
@@ -139,8 +140,8 @@ Database       Loop Closure
 # Software Requirements
 
 - Ubuntu 22.04
-- ROS2 Humble
-- Gazebo Classic
+- ROS2 Humble / Jazzy
+- Gazebo 
 - RTAB-Map ROS
 - TurtleBot3 packages
 - PCL
