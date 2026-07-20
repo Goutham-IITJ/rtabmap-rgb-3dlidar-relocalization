@@ -270,6 +270,16 @@ RTAB-Map database generated
 
 ---
 
+## Kidnapped Robot Recovery Validation
+
+| Recovery | Localization Pose (map) | Odom → Base | Map → Odom Correction | Recovery Trigger |
+|----------|--------------------------|-------------|-----------------------|------------------|
+| **1** | **ROS:** `1784077323.454`<br>`(-2.509, -3.502)`<br>Yaw **56.4°**<br>Cov ≈ **0.0008** | `(-0.168, -8.083)`<br>Translation remained locally bounded | Before: `(-5.653, 3.947)`<br>After: `(-9.622, -2.725)`<br>Δ ≈ **7.76 m**, **59.8°** | **10:01:54** → LC=402, Prox=631<br>**10:01:58** → LC=403, Prox=403 |
+| **2** | **ROS:** `1784077617.955`<br>`(-2.087, -3.057)`<br>Yaw **88.7°**<br>Cov ≈ **0.0007** | `(-0.162, -8.088)`<br>Still locally bounded | Before: `(-5.453, 2.939)`<br>After: `(-2.541, 5.020)`<br>Δ ≈ **3.58 m**, **30.8°** | **10:06:47** → LC=401, Prox=636 |
+| **3** | **ROS:** `1784077715.953`<br>`(-0.754, -3.950)`<br>Yaw **−53.0°** | `(-0.121, -8.362)`<br>Still locally bounded | Corrected to `(-4.721, 3.412)`<br>Yaw **29.1°** | **10:08:28** → LC=499, Prox=565 |
+
+---
+
 # Running Simulation
 
 Refer to
