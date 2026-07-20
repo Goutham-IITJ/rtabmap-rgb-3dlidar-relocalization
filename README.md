@@ -6,7 +6,7 @@
 </p>
 
 > Internship Project – ugo Inc., Tokyo, Japan  
-> IIT Jodhpur Robotics Society
+> Goutham A S
 
 ---
 
