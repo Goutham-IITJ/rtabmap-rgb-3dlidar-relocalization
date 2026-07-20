@@ -2,7 +2,7 @@
 ### Kidnapped Robot Recovery using Monocular RGB + 3D LiDAR + RTAB-Map
 
 <p align="center">
-  <img src="docs/pipeline.png" width="750"/>
+  <img src="docs/Screenshot from 2026-07-13 13-22-46.png" width="750"/>
 </p>
 
 > Internship Project – ugo Inc., Tokyo, Japan  
